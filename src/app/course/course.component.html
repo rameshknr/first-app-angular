@@ -1,0 +1,22 @@
+<div class="table-responsive-md">
+<table class="table">
+    <caption>Course Details</caption>
+
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Summary</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="table-info " *ngFor="let course of courseService.courses; index as i;">
+        <th scope="row">{{course.id}}</th>
+        <td>{{course.title}}</td>
+        <td>{{course.summary}}</td>
+        <td class="float-right text-danger" (click)="deleteCourse(course.id)"><i class="fas fa-minus-square"></i> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

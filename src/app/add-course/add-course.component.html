@@ -1,0 +1,17 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Title</span>
+    </div>
+    <input type="text"  #title  class="form-control" placeholder="Enter a Title" aria-label="title" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Summary</span>
+    </div>
+    <input type="text"  #summary  class="form-control" placeholder="Enter a summary" aria-label="summary" aria-describedby="basic-addon1">
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" (click)="addCourse(title.value, summary.value)">Add Course</button>
+</div>
+

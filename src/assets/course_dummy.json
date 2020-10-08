@@ -1,0 +1,7 @@
+[ 
+    {"title": "Java", "summary": "Basic Programming Language from Oracle"},
+    {"title": "Angular", "summary": "Framework from Google!!"},
+    {"title": "Spring", "summary": "Framework making Java Easy"},
+    {"title": "Git", "summary": "Source Code Management!!"},
+    {"title": "MongoDB", "summary": "NoSQL db"}
+]
