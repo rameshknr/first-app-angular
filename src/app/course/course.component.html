@@ -12,11 +12,19 @@
     </thead>
     <tbody>
       <tr  class="table-info " *ngFor="let course of courseService.courses; index as i;">
-        <th scope="row">{{course.id}}</th>
-        <td>{{course.title}}</td>
+        <th scope="row">{{i+1}}</th>
+        <td><a [routerLink]="['/details', course.title]">{{course.title}}</a></td>
         <td>{{course.summary}}</td>
         <td class="float-right text-danger" (click)="deleteCourse(course.id)"><i class="fas fa-minus-square"></i> </td>
       </tr>
     </tbody>
   </table>
-</div>
+</div> 
+
+
+
+<!--<div class="container">
+  <div class="row">
+    <app-card  *ngFor="let course of courseService.courses;" [courses] = "course" [id] = "course.id" (userEnrolled)="deleteCourse($event)" ></app-card>
+  </div>
+</div>-->

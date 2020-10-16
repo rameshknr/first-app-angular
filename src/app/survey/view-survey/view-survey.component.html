@@ -1,0 +1,16 @@
+<div class="container">
+    <div *ngIf="surveyService.radioSelectedString[0] !== '';else active_todo">
+        <h3>Survey Question</h3>
+        <table>
+            <tr  class="table-info text-left" *ngFor="let surveyQuestion of surveyService.surveyQuestion;index as i;">
+                <p>{{surveyQuestion}}</p>
+                <p class="text-dark">{{surveyService.radioSelectedString[i]}}</p>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-link text-info" (click)= 'addSurvey()' >Change Survey</button>
+    </div>
+    <ng-template #active_todo>
+        <button type="button" class="btn btn-link text-info" (click)= 'addSurvey()' >Do Survey</button>
+    </ng-template>
+    
+</div>

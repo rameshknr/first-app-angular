@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <div>
+            <h3>Survey Question</h3>
+            <table>
+                <tr  class="table-info text-left" *ngFor="let surveyQuestion of surveyService.surveyQuestion;index as i;">
+                   <td>
+                        <p>{{surveyQuestion}}</p>
+                        <ul class="list-group list-group-flush" >
+                            <li #name class="list-group-item"  *ngFor="let choice of surveyService.choices[i]"> 
+                                <input type="radio" name="{{i}}" value="{{choice}}" (change)="onItemChange(choice,i)"/> 
+                                {{choice}}
+                            </li>
+                        </ul>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Add Choice</span>
+                            </div>
+                            <input type="text"  #choiceAdd  class="form-control" placeholder="Enter a Title" aria-label="title" aria-describedby="basic-addon1">
+                            <button type="button" class="btn btn-info" (click)="addChoice(choiceAdd.value,i)">Add Choice</button>
+                        </div>
+                   </td> 
+                </tr>
+                
+            </table>
+        </div>
+        <button type="button" class="btn btn-primary" (click)= 'viewSurvey()' >Submit Survey</button>
+    </div>
+</div>

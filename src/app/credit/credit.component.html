@@ -1,0 +1,39 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Credit Card Number</span>
+    </div>
+    <input type="number"  #card  class="form-control" placeholder="Enter a Card Number" aria-label="title" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Name</span>
+    </div>
+    <input type="text"  #name  class="form-control" placeholder="Enter a Name" aria-label="summary" aria-describedby="basic-addon1">
+</div>
+<div>
+    <button type="button" class="btn btn-primary" (click)="addCard(card.value, name.value)">Add Card</button>
+</div>
+
+
+
+<div class="table-responsive-md">
+    <table class="table">
+        <caption>Credit Card Details</caption>
+    
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Card Number</th>
+            <th scope="col">Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  class="table-info " *ngFor="let card of cardDetailService.carddetail; index as i;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{card.cardNumber}}</td>
+            <td>{{card.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 

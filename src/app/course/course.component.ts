@@ -9,8 +9,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
-  
+
   deleteCourse(index: number){
+    console.log(index)
     this.courseService.deleteCourse(index)
     .subscribe(res => console.log(res))
   }

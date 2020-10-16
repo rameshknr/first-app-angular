@@ -1,0 +1,54 @@
+<div>
+  <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Add Todo</span>
+    </div>
+    <input #todo type="text" class="form-control" placeholder="Enter your todo" aria-label="Username" aria-describedby="basic-addon1">
+    <button class="btn btn-primary" (click)="addTodo(todo.value)">Add</button>
+  </div>
+<ul class="list-group list-group-flush" >
+    <li class="list-group-item" *ngFor="let todo of todos"> 
+      <h5 class="text-info">{{todo.text}} 
+      <span class="btn btn-success text-center" (click)="editTodo(todo.text)"><i class="fas fa-thumbs-up"></i></span>
+      <span class="btn btn-danger float-right" (click)="deleteTodo(todo.text)"><i class="far fa-trash-alt"></i></span>
+    </h5>
+    </li>
+</ul>
+
+<!-- 
+<div class="container">
+  <p>A: {{25 | currency}}</p>
+  <p>A: {{25 | currency:'INR'}}</p>
+
+    <p>A: {{25 | currency:'INR':'code'}}</p>
+
+    <p>B: {{25 | currency:'INR':'symbol':'4.2-2'}}</p>
+
+    <p>B: {{10 | currency:'INR':'symbol-narrow':'4.2-2'}}</p>
+
+    
+  </div>
+
+
+
+  <div class="container">
+    <p>e (no formatting): {{147852 | number}}</p>
+
+    <p>e (3.1-5): {{147852 | number:'3.1-5'}}</p>
+
+    <p>e (4.5-5): {{147852 | number:'4.5-5'}}</p>
+
+    <p>pi (no formatting): {{3.14 | number}}</p>
+
+    <p>pi (3.1-5): {{3.14 | number:'3.1-5'}}</p>
+
+    <p>pi (3.5-5): {{3.14 | number:'3.5-5'}}</p>
+
+    <p>-2.5 (1.0-0): {{-2.5 | number:'1.0-0'}}</p>
+  </div> -->
+
+
+
+  

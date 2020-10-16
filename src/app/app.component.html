@@ -1,5 +1,33 @@
-<app-add-course></app-add-course>
+<!--<app-add-course></app-add-course>
 <hr/>
 <app-course></app-course>
 
-<!--<app-posts></app-posts>-->
+<app-posts></app-posts>
+<app-parent></app-parent>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-info text-dark">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">Course Details</a> 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add" routerLinkActive="router-link-active">Add Course</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/posts" routerLinkActive="router-link-active">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus" routerLinkActive="router-link-active">About Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/survey/view-survey/" routerLinkActive="router-link-active">View Survey</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/survey/add-survey/" routerLinkActive="router-link-active">Add Survey</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
